@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Time</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>DojoWeather</h1>
+            <ul>
+                <li>
+                    <a href="#" onclick="loadingw(`Burbank`)">Burbank</a>
+                </li>
+                <li>
+                    <a href="#"onclick="loadingw(`Chicago`)">Chicago</a>
+                </li>
+                <li>
+                    <a href="#"onclick="loadingw(`Dallas`)">Dallas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sanjose">
+            <h2>San Jose</h2>
+            <form>
+                <label>Show Temperature In</label>
+                <select>
+                    <option>C</option>
+                    <option>F</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="dia">
+                <h2>Today</h2>
+                <img src="images/some_rain.png" alt="some rain"/>
+                <p>some rain</p>
+                <div class="temperaturas">
+                    <span class="tempmax">24</span>
+                    <span class="tempmin">18</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h2>Tomorrow</h2>
+                <img src="images/some_sun.png" alt="some sun"/>
+                <p>some sun</p>
+                <div class="temperaturas">
+                    <span class="tempmax">27</span>
+                    <span class="tempmin">19</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h2>Friday</h2>
+                <img src="images/some_clouds.png" alt="some clouds"/>
+                <p>some clouds</p>
+                <div class="temperaturas">
+                    <span class="tempmax">27</span>
+                    <span class="tempmin">19</span>
+                </div>
+            </div>
+            <div class="dia ultimo">
+                <h2>Saturday</h2>
+                <img src="images/some_sun.png" alt="some sun"/>
+                <p>some sun</p>
+                <div class="temperaturas">
+                    <span class="tempmax">26</span>
+                    <span class="tempmin">21</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="cookie">
+            <img src="images/cookie.png" alt="cookie">
+            <div class="text">
+                <h3>Stop! Cookie time</h3>
+                <p> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quasi atque repellendus porro accusantium dolor voluptates dolore, quos veritatis, dolorum quaerat a illo impedit odio mollitia maxime minima tempora veniam?
+                <a href="#">Read me...</a>
+                </p>
+            </div>
+            <button onclick="eliminacookie()">I Acept</button>
+        </div>
+    </footer>
+    
+    <script src="JS/script.js"></script>
+</body>
+</html>
