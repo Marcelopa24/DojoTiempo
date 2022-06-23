@@ -1,3 +1,4 @@
+
 function eliminacookie(){
     var elementcookie = document.querySelector(".cookie")
     elementcookie.remove();
@@ -10,31 +11,25 @@ function loadingw(city){
     elementh2.innerHTML= city; 
 }
 
+function convert(){    
+    const switchTemp = document.querySelector(".temp").value
+    const temps = document.querySelectorAll(".tempmax, .tempmin");
 
-const switchTemp = document.querySelector(".temp")
-
-
-    switchTemp.addEventListener('change', (event) => {
-        const currentTemp = event.target
-         console.log(currentTemp)
-     });
-
-function convert(){
-    
-
-    var temps =document.querySelectorAll(".tempmax, .tempmin");
-    /*var FoC = elementselect.value;*/
-    for(const idx in temps){
-        
-        let farenheite =(parseInt (temps[idx].innerHTML) * 9/5)+32;
-        temps[idx].innerHTML=farenheite;
+    if(switchTemp === "F"){
+        convertToFarenheit(temps)
     }
-    /*if(var temps =document.querySelectorAll(".tempmax, .tempmin");){
-        temps[idx].innerHTML=farenheite
+
+    if(switchTemp === "C"){       
+        for(const idx in temps){                 
+            const celsius=  (parseInt(temps[idx].innerHTML) - 32) *  (5/9);  
+            temps[idx].innerHTML = Math.ceil(celsius) 
+        }
     }
-    else{
-        nome.innerHTML="Jane Doe"
-    }
-    }*/
 }
 
+const convertToFarenheit = (temps) => {
+    for(const idx in temps){    
+       let farenheite =(parseInt (temps[idx].innerHTML) * 9/5)+32;
+        temps[idx].innerHTML = farenheite; 
+    }
+}
